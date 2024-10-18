@@ -1,0 +1,124 @@
+body {
+    padding: 5px;
+}
+header {
+    height: 25px;
+    width: 80%;
+    margin: 10px 30px 10px 15px;
+    position: fixed;
+    top: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background-color: #f9f9f4;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #e2e0e0be;
+    border-radius: 25px;
+    font-family: "Inter Tight", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    text-decoration: none;
+    }
+header a {
+    text-decoration: none;
+    color: #0e0e0f;
+}
+.header-izquierdo {
+    height: 25px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content:flex-start;
+    text-decoration: none;
+}
+.header-izquierdo img {
+    height: 25px;
+    width: 25px;
+    padding: 5px;
+}
+.header-derecho {
+    height: 25px;
+    width: 0%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+.header-derecho a {
+    font-size: 0;
+}
+main {
+    padding: 8px;
+}
+
+.contenedor-saludo {
+    background-color: #faf9f9;
+    padding: 50px 16px;
+    margin: 10px 0px;
+    height: 100px;
+    width: 95%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #e2e0e0be;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+#texto-hola {
+    color: gray;
+    font-family: "Inter Tight", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    
+}
+
+
+@media screen and (min-width:768px) {
+    header {
+        height: 30px;
+        width: 90%;
+        padding: 8px;
+        position: fixed;
+        top: 30px;
+        display: flex;
+        align-items: center;
+        flex-direction: row; }
+
+        .header-estatico {
+            background-color: #f9f9f4;
+            margin: 5px 20px;
+            position: fixed;
+            height: 25px;
+            width: 90px;
+            top: 30px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: #e2e0e0be;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            }
+
+        header .header-derecho {
+                height: 30px;
+                width: 100%;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                justify-content: space-around;
+    }
+    header .header-derecho a {
+        font-size: 16px;
+    }
+}
+
+
