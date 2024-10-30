@@ -2,24 +2,27 @@ body {
     padding: 5px;
 }
 header {
-    height: 25px;
-    width: 80%;
-    margin: 10px 30px 10px 15px;
-    position: fixed;
-    top: 30px;
+    height: 35px;
+    width: 100%;;
     display: flex;
     align-items: center;
     flex-direction: row;
     background-color: #f9f9f4;
     border-width: 1px;
-    border-style: solid;
-    border-color: #e2e0e0be;
-    border-radius: 25px;
     font-family: "Inter Tight", sans-serif;
     font-optical-sizing: auto;
     font-weight: <weight>;
     font-style: normal;
     text-decoration: none;
+    border-bottom-width: 1px;
+    border-color: var(--token-1795d1d7-4691-42f6-b067-6d46fce27998, rgba(0, 0, 0, 0.1));
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-style: solid;
+    border-top-width: 1px;
+    border-radius: 32px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px -3px 0px 0px inset, rgb(255, 255, 255) 0px 0px 0px 2px inset, rgba(0, 0, 0, 0.06) 0px 4px 2px 0px inset, rgba(0, 0, 0, 0.04) 0px 0px 24px 4px inset, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+    opacity: 1;
     }
 header a {
     text-decoration: none;
@@ -56,19 +59,28 @@ main {
     padding: 8px;
 }
 
+/* Estilos inicio */
 .contenedor-saludo {
     background-color: #faf9f9;
     padding: 50px 16px;
-    margin: 10px 0px;
     height: 300px;
-    width: 95%;
     border-width: 1px;
     border-style: solid;
     border-color: #e2e0e0be;
-    border-radius: 25px;
     display: flex;
     align-items: center;
     flex-direction: row;
+    border-bottom-width: 1px;
+    border-color: var(--token-1795d1d7-4691-42f6-b067-6d46fce27998, rgba(0, 0, 0, 0.1));
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-style: solid;
+    border-top-width: 1px;
+    border-radius: 32px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px -3px 0px 0px inset, rgb(255, 255, 255) 0px 0px 0px 2px inset, rgba(0, 0, 0, 0.06) 0px 4px 2px 0px inset, rgba(0, 0, 0, 0.04) 0px 0px 24px 4px inset, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+    opacity: 1;
+    margin-bottom: 30px;
+
 }
 #texto-hola {
     color: gray;
@@ -76,7 +88,6 @@ main {
     font-optical-sizing: auto;
     font-weight: <weight>;
     font-style: normal;
-    
 }
 
 #texto-presentacion {
@@ -88,6 +99,7 @@ main {
     font-size: 18px;
     letter-spacing: 2px;
 }
+
 .foto-presentacion {
     display: block;
     width: 240px;
@@ -108,6 +120,7 @@ main {
     text-align: justify;
 }
 
+/* Estilos frase */
 .contenedor-frase {
     padding: 20px 0px;
     color: gray;
@@ -119,6 +132,7 @@ main {
     font-size: 18px;
 }
 
+/* Estilos habilidades */
 .texto-y-habilidades {
     color: #0e0e0f;
     font-family: "Inter Tight", sans-serif;
@@ -133,6 +147,7 @@ main {
 
 }
 
+/* Estilos proyectos */
 .encabezado-titulo-proyectos {
     color: #0e0e0f;
     font-family: "Inter Tight", sans-serif;
@@ -142,19 +157,129 @@ main {
     font-size: 15px;
 }
 
-.proyecto {
-    --border-bottom-width: 1px;
-    --border-color: var(--token-1795d1d7-4691-42f6-b067-6d46fce27998, rgba(0, 0, 0, 0.1));
-    --border-left-width: 1px;
-    --border-right-width: 1px;
-    --border-style: solid;
-    --border-top-width: 1px;
-    background: linear-gradient(rgba(250, 250, 250, 0) 0%, rgba(250, 250, 250, 0) 100%);
+.card {
+    position: relative;
     width: 100%;
+    height: 350px;
+    margin-bottom: 30px;
+}
+
+.card .card-frente {
+    transform: perspective(600px) rotateY(0deg);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    overflow: hidden;
+    transition: .5s;
+    border-color:#0e0e0f
+    border-style: solid;
+    border-top-width: 1px;
+    border-radius: 32px;
+}
+
+.card .card-frente img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.card .card-frente h3 {
+    position: absolute;
+    margin-bottom: 0;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #f9f9f4;
+    background-color: #848488da;
+    text-align: center;
+
+}
+.card .card-detras {
+    transform: perspective(600px) rotateY(180deg);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    overflow: hidden;
+    transition: .5s;
+    background-color: #f9f9f4;
+    border-width: 1px;
+    font-family: "Inter Tight", sans-serif;
+    font-optical-sizing: auto;
+    text-decoration: none;
+    border-bottom-width: 1px;
+    border-color: var(--token-1795d1d7-4691-42f6-b067-6d46fce27998, rgba(0, 0, 0, 0.1));
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-style: solid;
+    border-top-width: 1px;
     border-radius: 32px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px -3px 0px 0px inset, rgb(255, 255, 255) 0px 0px 0px 2px inset, rgba(0, 0, 0, 0.06) 0px 4px 2px 0px inset, rgba(0, 0, 0, 0.04) 0px 0px 24px 4px inset, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
-    opacity: 1;
+    opacity: 1:
 }
+
+.card .card-detras h3 {
+font-size: 24px;
+text-align: center;
+
+}
+
+.card .card-detras p {
+    padding: 8px;
+    font-size: 18px;
+    color: gray;
+    text-align: center;
+}
+.card .card-detras .parrafo-2 {
+    font-size: 0px;
+}
+
+.card .card-detras .ir-a-proyecto {
+    border-bottom-width: 1px;
+    border-color: var(--token-1795d1d7-4691-42f6-b067-6d46fce27998, rgba(0, 0, 0, 0.1));
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-style: solid;
+    border-top-width: 1px;
+    background: linear-gradient(rgb(250, 250, 250) 0%, rgb(250, 250, 250) 100%);
+    border-radius: 32px;
+    width: 95%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+    position: fixed;
+    bottom: 5%;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px -3px 0px 0px inset, rgb(255, 255, 255) 0px 0px 0px 2px inset, rgba(0, 0, 0, 0.06) 0px 4px 2px 0px inset, rgba(0, 0, 0, 0.04) 0px 0px 24px 4px inset, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+}
+
+.card .card-detras .ir-a-proyecto p {
+    color: #0e0e0f;
+    font-weight: bolder;
+    width: 80%;
+    text-align: left;
+    padding-left: 15px;
+}
+
+.card .card-detras .ir-a-proyecto img {
+    width: auto;
+    height: 80%;
+    padding-right: 15px;
+    opacity: 80%;
+}
+
+.card:hover .card-frente {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .card-detras {
+    transform: perspective(600px) rotateY(360deg);
+}
+
+
 
 @media screen and (min-width:768px) {
     header {
